@@ -1,0 +1,413 @@
+{
+  "terms": [
+    {
+      "pattern": "地味に",
+      "category": "low_information_modifier",
+      "note": "何がどの程度変わるかを説明できるなら具体化する。削るだけで意味が保てる場合も多い。"
+    },
+    {
+      "pattern": "効く|効いた|効いている|効いていた|効きます|効きました|効いてきます|効いてくる",
+      "category": "vague_effect",
+      "note": "技術的な因果を指す場合は『有効』『効果がある』『改善する』『影響する』『寄与する』『抑える』など、実際の作用に合う語を検討する。薬効など『効く』自体が自然な文脈は維持する。",
+      "pre_pct": 2.0,
+      "recent_pct": 22.3
+    },
+    {
+      "pattern": "入口",
+      "category": "metaphor",
+      "note": "開始点、対象API、導入箇所など具体的な対象を指せるか確認する。",
+      "pre_pct": 0.4,
+      "recent_pct": 6.8
+    },
+    {
+      "pattern": "土台",
+      "category": "metaphor",
+      "note": "基盤、前提、共通処理など実体のある語で説明できるか確認する。",
+      "pre_pct": 0.3,
+      "recent_pct": 5.5
+    },
+    {
+      "pattern": "核心",
+      "category": "abstract_emphasis",
+      "note": "何が重要なのかを直接述べた方が情報量が増えないか確認する。",
+      "pre_pct": 0.07,
+      "recent_pct": 2.4
+    },
+    {
+      "pattern": "別物",
+      "category": "vague_contrast",
+      "note": "何がどう異なるのかを比較軸で示せるか確認する。",
+      "pre_pct": 0.4,
+      "recent_pct": 5.5
+    },
+    {
+      "pattern": "定石",
+      "category": "generalized_evaluation",
+      "note": "具体的な慣行、推奨手順、理由を示せるか確認する。",
+      "pre_pct": 0.1,
+      "recent_pct": 1.8
+    },
+    {
+      "pattern": "事故",
+      "category": "metaphor",
+      "note": "障害、誤操作、データ破損など実際に起こる事象へ具体化できるか確認する。",
+      "pre_pct": 0.3,
+      "recent_pct": 6.8
+    },
+    {
+      "pattern": "落とし穴",
+      "category": "metaphor",
+      "note": "失敗条件や制約を直接書けるか確認する。",
+      "pre_pct": 0.3,
+      "recent_pct": 4.0
+    },
+    {
+      "pattern": "実測",
+      "category": "measurement_claim",
+      "note": "実際の測定値・測定条件を伴うか確認する。伴う場合は維持してよい。",
+      "pre_pct": 0.1,
+      "recent_pct": 7.2
+    },
+    {
+      "pattern": "切り分け(?:る|ます|た|て|られる|ました)",
+      "category": "technical_metaphor",
+      "note": "原因調査の意味なら自然。対象や観点が曖昧な場合だけ具体化する。",
+      "pre_pct": 0.5,
+      "recent_pct": 5.2
+    },
+    {
+      "pattern": "重要(?:です|になります|となります)?",
+      "category": "abstract_emphasis",
+      "note": "重要である理由や失敗時の結果を直接書けるか確認する。"
+    },
+    {
+      "pattern": "ポイント(?:です|になります|となります)?",
+      "category": "abstract_emphasis",
+      "note": "後続内容だけで通じる場合は前置きを省ける。"
+    },
+    {
+      "pattern": "これにより",
+      "category": "generic_connector",
+      "note": "因果関係を具体的な主語・結果で直接つなげられるか確認する。"
+    },
+    {
+      "pattern": "することができます",
+      "category": "nominalized_verb",
+      "note": "『できます』または具体的な動詞へ短縮できるか確認する。"
+    },
+    {
+      "pattern": "と言えるでしょう|ではないでしょうか",
+      "category": "generic_hedge",
+      "note": "根拠に応じて言い切るか、未確認なら何が不確かなのかを示す。"
+    },
+    {
+      "pattern": "瞬間",
+      "category": "corpus_shift_temporal",
+      "note": "時間表現として必要なら維持する。『〜した瞬間』が単に『〜すると』『〜した時』で足りないか確認する。",
+      "pre_pct": 0.9,
+      "recent_pct": 13.7
+    },
+    {
+      "pattern": "壊れ(?:る|た|ている|ていた|ない|ます)",
+      "category": "corpus_shift_failure",
+      "note": "実際の故障・破綻を指すなら維持する。何がどの状態になるのか具体化できる場合は具体語を選ぶ。",
+      "pre_pct": 0.8,
+      "recent_pct": 13.1
+    },
+    {
+      "pattern": "境界",
+      "category": "corpus_shift_structure",
+      "note": "境界値など技術用語なら維持する。比喩的な役割分担を指す場合は対象を具体化できるか確認する。",
+      "pre_pct": 1.0,
+      "recent_pct": 12.8
+    },
+    {
+      "pattern": "静かに",
+      "category": "corpus_shift_adverb",
+      "note": "エラーや通知なしに起きる意味なら、その条件を直接説明できないか確認する。",
+      "pre_pct": 0.1,
+      "recent_pct": 4.9
+    },
+    {
+      "pattern": "黙って",
+      "category": "corpus_shift_adverb",
+      "note": "通知なし・無視・破棄など実際の挙動を直接書けないか確認する。",
+      "pre_pct": 0.1,
+      "recent_pct": 3.4
+    },
+    {
+      "pattern": "正本",
+      "category": "corpus_shift_translation",
+      "note": "source of truth等の概念を指す場合でも、読者に通じる用語か、既存の用語で説明した方がよいか確認する。",
+      "pre_pct": 0.0,
+      "recent_pct": 1.7
+    },
+    {
+      "pattern": "疑(?:う|って|い)",
+      "category": "verification_language",
+      "note": "疑う対象と根拠が明確なら維持する。",
+      "pre_pct": 0.5,
+      "recent_pct": 6.3
+    },
+    {
+      "pattern": "照合",
+      "category": "verification_language",
+      "note": "比較対象が明確なら維持する。抽象的な確認の言い換えになっていないかを見る。",
+      "pre_pct": 0.3,
+      "recent_pct": 4.5
+    },
+    {
+      "pattern": "見落と(?:す|され)",
+      "category": "verification_language",
+      "note": "具体的に何を見落とすのか本文にあるか確認する。",
+      "pre_pct": 0.3,
+      "recent_pct": 4.1
+    },
+    {
+      "pattern": "突き合わせ(?:る|て|た)",
+      "category": "verification_language",
+      "note": "比較対象と差分が明確なら維持する。",
+      "pre_pct": 0.06,
+      "recent_pct": 3.7
+    },
+    {
+      "pattern": "断定",
+      "category": "verification_language",
+      "note": "不確実性を説明する語として必要なら維持する。留保の定型句だけになっていないか見る。",
+      "pre_pct": 0.08,
+      "recent_pct": 2.4
+    },
+    {
+      "pattern": "取り違え(?:る|た|て)",
+      "category": "verification_language",
+      "note": "何と何を取り違えるのか具体的なら維持する。",
+      "pre_pct": 0.02,
+      "recent_pct": 1.4
+    },
+    {
+      "pattern": "道具",
+      "category": "role_metaphor",
+      "note": "実体のあるツールを指す場合は自然。役割の比喩なら具体的な機能を直接書けるか確認する。",
+      "pre_pct": 0.3,
+      "recent_pct": 4.1
+    },
+    {
+      "pattern": "主役",
+      "category": "role_metaphor",
+      "note": "説明上の比喩なら、実際に中心となる処理・要素を直接示せるか確認する。",
+      "pre_pct": 0.1,
+      "recent_pct": 1.9
+    },
+    {
+      "pattern": "構図",
+      "category": "role_metaphor",
+      "note": "関係を表すなら、その関係を具体的に書けるか確認する。",
+      "pre_pct": 0.09,
+      "recent_pct": 1.6
+    },
+    {
+      "pattern": "線引き",
+      "category": "role_metaphor",
+      "note": "境界条件や責務分担など、何を分けるのか具体化できるか確認する。",
+      "pre_pct": 0.04,
+      "recent_pct": 1.3
+    },
+    {
+      "pattern": "混ざ(?:る|って|った)",
+      "category": "failure_language",
+      "note": "混在する対象が具体的なら維持する。",
+      "pre_pct": 0.4,
+      "recent_pct": 4.9
+    },
+    {
+      "pattern": "破綻",
+      "category": "failure_language",
+      "note": "何が成立しなくなるのか具体的に示せるか確認する。",
+      "pre_pct": 0.2,
+      "recent_pct": 2.7
+    },
+    {
+      "pattern": "実害",
+      "category": "failure_language",
+      "note": "影響範囲を説明する語として必要なら維持する。",
+      "pre_pct": 0.08,
+      "recent_pct": 1.4
+    },
+    {
+      "pattern": "素通り",
+      "category": "failure_metaphor",
+      "note": "検証やフィルタを通過する意味なら、どの処理が働かないのか具体化できるか確認する。",
+      "pre_pct": 0.04,
+      "recent_pct": 1.1
+    },
+    {
+      "pattern": "潰(?:す|して|した)",
+      "category": "action_metaphor",
+      "note": "問題を解消する意味なら、何を確認・修正するのか具体化できるか確認する。",
+      "pre_pct": 0.3,
+      "recent_pct": 4.2
+    },
+    {
+      "pattern": "踏み込(?:む|んで|んだ)",
+      "category": "action_metaphor",
+      "note": "説明範囲を広げる意味なら、追加で扱う内容を直接示せるか確認する。",
+      "pre_pct": 0.3,
+      "recent_pct": 2.7
+    },
+    {
+      "pattern": "塞(?:ぐ|いで|いだ)",
+      "category": "action_metaphor",
+      "note": "経路や穴を物理的・論理的に閉じる意味が明確なら維持する。",
+      "pre_pct": 0.04,
+      "recent_pct": 1.5
+    },
+    {
+      "pattern": "溶か(?:す|した|して)",
+      "category": "action_metaphor",
+      "note": "時間・資源の消費を指すなら、可能なら実際の量や原因を示す。",
+      "pre_pct": 0.1,
+      "recent_pct": 1.3
+    },
+    {
+      "pattern": "逃が(?:す|した|して)",
+      "category": "action_metaphor",
+      "note": "処理の回避先や退避先が明確なら維持する。",
+      "pre_pct": 0.01,
+      "recent_pct": 1.2
+    },
+    {
+      "pattern": "倒(?:す|した|して)",
+      "category": "action_metaphor",
+      "note": "設計判断の比喩なら、どちらを優先するのか直接書けるか確認する。",
+      "pre_pct": 0.2,
+      "recent_pct": 1.1
+    },
+    {
+      "pattern": "既定",
+      "category": "evaluation_language",
+      "note": "製品・仕様の正式な用語なら維持する。『デフォルト』等との使い分けが読者に自然か確認する。",
+      "pre_pct": 0.5,
+      "recent_pct": 7.1
+    },
+    {
+      "pattern": "定番",
+      "category": "evaluation_language",
+      "note": "一般的だと述べる根拠や対象範囲が必要か確認する。",
+      "pre_pct": 0.5,
+      "recent_pct": 3.6
+    },
+    {
+      "pattern": "要点",
+      "category": "evaluation_language",
+      "note": "後続内容だけで十分なら見出し的な前置きを省ける。",
+      "pre_pct": 0.5,
+      "recent_pct": 3.2
+    },
+    {
+      "pattern": "素朴",
+      "category": "evaluation_language",
+      "note": "何を単純化しているのか具体化できるか確認する。",
+      "pre_pct": 0.2,
+      "recent_pct": 2.7
+    },
+    {
+      "pattern": "桁違い",
+      "category": "evaluation_language",
+      "note": "比較対象と数値差を示せるなら具体化する。",
+      "pre_pct": 0.05,
+      "recent_pct": 1.1
+    }
+  ],
+  "negative_contrast": [
+    {
+      "pattern": "(?:単なる|単に).{0,24}ではなく",
+      "note": "後半だけで意味が成立するか確認する。"
+    },
+    {
+      "pattern": ".{1,24}ではなく.{1,40}(?:です|だ|になる|となる)",
+      "note": "否定対比を一段挟む必要があるか確認する。"
+    }
+  ],
+  "cooccurrence_patterns": [
+    {
+      "pattern": "地味に.{0,18}効(?:く|いた|いて|きます|きました)",
+      "category": "low_information_combo",
+      "note": "『地味に』と『効く』の両方が作用を曖昧にしやすい。測定結果や具体的な作用を直接書けないか確認する。"
+    },
+    {
+      "pattern": "(?:非常に|かなり|圧倒的に).{0,8}(?:重要|効果的|有効)",
+      "category": "intensity_abstract_evaluation",
+      "note": "程度副詞と抽象評価が重なっている。比較対象、条件、効果量などで具体化できるか確認する。"
+    },
+    {
+      "pattern": "本質的に.{0,8}(?:重要|異なる|有効)",
+      "category": "abstract_evaluation_combo",
+      "note": "『本質的に』が比較軸や理由を省略していないか確認する。"
+    },
+    {
+      "pattern": "(?:非常に|かなり).{0,12}(?:便利|強力|柔軟|シンプル)",
+      "category": "generic_praise_combo",
+      "note": "評価語だけで済ませず、何がどう便利・強力なのかが本文にあるか確認する。"
+    }
+  ],
+  "repeat_terms": [
+    "つまり",
+    "一方で",
+    "さらに",
+    "また",
+    "加えて",
+    "実際",
+    "重要",
+    "ポイント",
+    "これにより",
+    "そのため",
+    "このように"
+  ],
+  "repeat_phrases": [
+    "することができます",
+    "と言えるでしょう",
+    "ではないでしょうか",
+    "という点です",
+    "ということです",
+    "ことが重要です"
+  ],
+  "paragraph_cooccurrence": {
+    "min_distinct_categories": 2,
+    "ignore_categories": [
+      "measurement_claim",
+      "technical_metaphor"
+    ],
+    "note": "同じ段落に異なる種類の特徴が重なっています。個々の語が妥当でも、説明が抽象語・接続語・評価語へ偏っていないか段落単位で読み直してください。"
+  },
+  "corpus_baselines": {
+    "pre_ai_2019_2022": {
+      "label": "Qiita 2019–2022・各年8月平均",
+      "article_count": 22476,
+      "metrics": {
+        "prose_chars": 976,
+        "commas_per_sentence": 0.63,
+        "bold_per_1000_chars": 1.26,
+        "sentence_length_mean": 35.4,
+        "sentence_length_cv": 0.609,
+        "polite_sentence_ratio": 0.502
+      }
+    },
+    "recent_2026": {
+      "label": "Qiita 2026年8月平均",
+      "metrics": {
+        "prose_chars": 1914,
+        "commas_per_sentence": 0.95,
+        "bold_per_1000_chars": 3.83,
+        "sentence_length_mean": 39.2,
+        "sentence_length_cv": 0.535,
+        "polite_sentence_ratio": 0.661
+      }
+    }
+  },
+  "corpus_source": {
+    "url": "https://nyosegawa.com/posts/qiita-writing-before-after-ai/",
+    "sample": "2019〜2026年の各年8月",
+    "documentation": "corpus-analysis.md",
+    "role": "語の出現率と文体指標の参考表示"
+  }
+}
